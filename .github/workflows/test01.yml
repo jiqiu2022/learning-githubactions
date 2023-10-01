@@ -1,0 +1,9 @@
+name: mytest1
+run-name: ${{ github.actor }} 第一个测试项目
+on: [push,pull_request]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "第一次测试"
+      - run: ls
