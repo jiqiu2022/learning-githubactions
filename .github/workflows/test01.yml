@@ -10,3 +10,10 @@ jobs:
     steps:
       - run: echo "第一次测试"
       - run: ls
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 16.13.x
+          cache: npm
+      - name: Install
+        run: npm ci
